@@ -1,6 +1,6 @@
-# Spatial Regionalization of Commuting Data with Stochastic Blockmodeling: Code and Data
+# Urban Boundary Delineation from Commuting Data with Bayesian Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy
 
-This repository contains the code implementing the greedy agglomerative algorithm used to perform spatial regionalization described in the paper "Spatial Regionalization of Commuting Data with Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy" by Sebastian Morel-Balbi and Alec Kirkley.
+This repository contains the code implementing the greedy agglomerative algorithm used to perform spatial regionalization described in the paper "Urban Boundary Delineation from Commuting Data with Bayesian Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy" by Sebastian Morel-Balbi and Alec Kirkley.
 
 The files are:
 
@@ -22,7 +22,7 @@ $$
     C(B) + \sum_r g(r) + \sum_{r,s} f(r, s).
 $$
 
-The code implementation provided here uses an objective function corresponding to the description length of a weighted stochastic block model, as described in the paper "Spatial Regionalization of Commuting Data with Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy", but can be modified at will.
+The code implementation provided here uses an objective function corresponding to the description length of a weighted stochastic block model, as described in the paper "Urban Boundary Delineation from Commuting Data with Bayesian Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy", but can be modified at will.
 
 The algorithm is implemented by the function `greedy_opt` in the `greedy_algorithm.py` module.
 
