@@ -152,11 +152,11 @@ def greedy_opt(N, spatial_elist, flow_elist):
             + loggamma(N + 1)
         )
 
-    def g(
-        r,
-    ):  # if tuple entered as cluster index, it adds corresponding terms for those indices for merge
+    def g(r):
         """
-        Cluster-level contribution to the description length
+        Computes the cluster-level contribution to the description length for
+        cluster r. If a tuple is entered as the cluster index, it adds the
+        corresponding terms for those indices for the merge.
 
         Parameters
         ----------
@@ -177,11 +177,12 @@ def greedy_opt(N, spatial_elist, flow_elist):
         # return -N*np.log(n_r/N) #use stirling approximation of log binomial
         return -loggamma(n_r + 1)
 
-    def f(
-        r, s
-    ):  # term for r --> s. if tuple entered as cluster index, it adds corresponding terms for those indices for merge
+    def f(r, s):
         """
-        Cluster-to-cluster contribution to the description length
+        Cluster-to-cluster contribution to the description length.
+        Computes the term for r --> s.
+        If a tuple is entered as the cluster index, it adds the corresponding
+        terms for those indices for the merge.
 
         Parameters
         ----------
@@ -231,9 +232,9 @@ def greedy_opt(N, spatial_elist, flow_elist):
 
         return logchoose(n_r * n_s, e_rs) + logchoose(w_rs - 1, e_rs - 1)
 
-    def total_dl():  # total description length or objective value of interest
+    def total_dl():
         """
-        Computes the total description length
+        Computes the total description length or objective value of interest
 
         Returns
         -------
@@ -247,12 +248,11 @@ def greedy_opt(N, spatial_elist, flow_elist):
 
         return dl
 
-    def delta_dl(
-        r, s
-    ):  # only needs to be computed entirely when the merge (r,s) is not stored
-        # in the ddl_c dictionary used to track merges.
+    def delta_dl(r, s):
         """
-        Computes the change in description length after merging clusters r and s
+        Computes the change in description length after merging clusters r and s.
+        Only needs to be computed entirely when the merge (r,s) is not stored
+        in the ddl_c dictionary used to track merges.
 
         Parameters
         ----------
