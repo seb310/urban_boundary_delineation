@@ -30,7 +30,7 @@ The algorithm is implemented by the function `greedy_opt` in the `greedy_algorit
 
 `greedy_opt` takes in the following parameters:
 
-**N**: he number of nodes in the network.
+**N**: The number of nodes in the network.
 
 **spatial_elist**: A list of tuples $(i, j)$ encoding the spatial adjacencies of the fundamental spatial units, where a tuple $(i, j)$ indicates that unit $i$ and unit $j$ are spatially adjacent.
 
