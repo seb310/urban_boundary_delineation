@@ -4,15 +4,15 @@ This repository contains the code implementing the greedy agglomerative algorith
 
 The files are:
 
-**greedy_algorithm.py**: &emsp; Python module containing the code for implementing the greedy agglomerative algorithm.
+**greedy_algorithm.py**: Python module containing the code for implementing the greedy agglomerative algorithm.
 
-**example.ipynb**: &emsp; Jupyter notebook containing an example use case of the greedy algorithm when used to perform spatial regionalization of the Baton Rouge, LA CBSA.
+**example.ipynb**: Jupyter notebook containing an example use case of the greedy algorithm when used to perform spatial regionalization of the Baton Rouge, LA CBSA.
 
-**Baton Rouge, LA.pkl**: &emsp; Pickled dictionary containing the spatial and flow edge lists for the Baton Rouge, LA CBSA. See example.ipynb for more information.
+**Baton Rouge, LA.pkl**: Pickled dictionary containing the spatial and flow edge lists for the Baton Rouge, LA CBSA. See example.ipynb for more information.
 
-**geo_gdf.pkl**: &emsp; Pickled GeoPandas geodataframe contaiing the geometries for the Baton Rouge, LA CBSA. Used for plotting in example.ipynb.
+**geo_gdf.pkl**: Pickled GeoPandas geodataframe containing the geometries for the Baton Rouge, LA CBSA. Used for plotting in example.ipynb.
 
-**README.md**: &emsp; This file.
+**README.md**: This file.
 
 ## Typical usage
 
@@ -30,21 +30,21 @@ The algorithm is implemented by the function `greedy_opt` in the `greedy_algorit
 
 `greedy_opt` takes in the following parameters:
 
-**N**: &emsp; The number of nodes in the network.
+**N**: he number of nodes in the network.
 
-**spatial_elist**: &emsp; A list of tuples $(i, j)$ encoding the spatial adjacencies of the fundamental spatial units, where a tuple $(i, j)$ indicates that unit $i$ and unit $j$ are spatially adjacent.
+**spatial_elist**: A list of tuples $(i, j)$ encoding the spatial adjacencies of the fundamental spatial units, where a tuple $(i, j)$ indicates that unit $i$ and unit $j$ are spatially adjacent.
 
-**flow_elist**: &emsp; A list of tuples $(i, j,w)$ encoding the flows between the fundamental spatial units, where a tuple $(i, j, w)$ indicates a flow of $w$ going from unit $i$ to unit $j$.
+**flow_elist**: A list of tuples $(i, j,w)$ encoding the flows between the fundamental spatial units, where a tuple $(i, j, w)$ indicates a flow of $w$ going from unit $i$ to unit $j$.
 
-The file `Baton Rouge, LA.pkl` contains a pickled dicitonary with the input parameters for the example case of Baton Rouge in Louisiana, as shown in `example.ipynb`.
+The file `Baton Rouge, LA.pkl` contains a pickled dictionary with the input parameters for the example case of Baton Rouge in Louisiana, as shown in `example.ipynb`.
 
 ### Outputs
 
 Once the input parameters are available, the algorithm can be run by calling the function `greedy_opt(N, spatial_elist, flow_elist)`. The outputs of the function are
 
-**DLs**: &emsp; A list of description length values (in nats) at each iteration of the algorithm.
+**DLs**: A list of description length values (in nats) at each iteration of the algorithm.
 
-**partitions**: &emsp; A list of partitions at each iteration of the algorithm, where each partition is described by a list containing the node identifiers of the nodes belonging to the partition.
+**partitions**: A list of partitions at each iteration of the algorithm, where each partition is described by a list containing the node identifiers of the nodes belonging to the partition.
 
 ## Notes
 
