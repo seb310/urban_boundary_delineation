@@ -1,6 +1,5 @@
-# Urban Boundary Delineation from Commuting Data with Bayesian Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy
-
-This repository contains the code implementing the greedy agglomerative algorithm used to perform spatial regionalization described in the paper "Urban Boundary Delineation from Commuting Data with Bayesian Stochastic Blockmodeling: Scale, Contiguity, and Hierarchy" by Sebastian Morel-Balbi and Alec Kirkley.
+# Bayesian regionalization of urban mobility networks
+This repository contains the code implementing the greedy agglomerative algorithm used to perform spatial regionalization described in the paper "Bayesian regionalization of urban mobility networks" by Sebastian Morel-Balbi and Alec Kirkley ([https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.033307](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.6.033307)).
 
 The files are:
 
